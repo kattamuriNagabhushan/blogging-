@@ -8,6 +8,7 @@ import About from './pages/About'
 import Projects from './pages/Projects'
 import Home from './pages/Home'
 import Header from './components/Header'
+import Footer from './components/Footer'
 
 export default function App() {
   return (
@@ -26,6 +27,8 @@ export default function App() {
 
         
       </Routes>
+
+      <Footer/>
     
     </BrowserRouter>
   )
