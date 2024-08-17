@@ -26,6 +26,9 @@ app.get("/" , (req , res) =>{
 app.use("/api/user" , userRoutes)
 app.use("/api/auth" , authRoutes)
 app.use((err , req , res , next) =>{
+
+    console.log("index.js -> app.use err fun executed");
+    
     const statusCode = err.statusCode || 500;
     const message = err.message || "Internal server error"
     res.status(statusCode).json({
