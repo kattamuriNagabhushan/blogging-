@@ -5,11 +5,14 @@ import { AiOutlineSearch } from 'react-icons/ai'
 import { FaMoon ,FaSun} from 'react-icons/fa'
 import { useSelector ,useDispatch} from 'react-redux'
 import { toggleTheme } from '../redux/theme/themeSlice'
+import { signoutSuccess } from '../redux/user/userSlice'
+import { useNavigate } from 'react-router-dom'
 
 
 export default function Header() {
     
   const path = useLocation().pathname;
+  const navigate  = useNavigate();
   const dispatch = useDispatch();
   const { theme } = useSelector((state) => state.theme);
   const { currentUser } = useSelector((state) => state.user) 
@@ -25,6 +28,7 @@ export default function Header() {
         console.log(data.message);
       } else {
         dispatch(signoutSuccess());
+        navigate('/sign-in')
       }
     } catch (error) {
       console.log(error.message);
