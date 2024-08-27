@@ -120,6 +120,7 @@ export default function DashPosts() {
                     >
                       Delete
                     </span>
+                    
                   </Table.Cell>
                   <Table.Cell>
                     <Link
