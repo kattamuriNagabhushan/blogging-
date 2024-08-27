@@ -25,9 +25,7 @@ app.use(express.json())
 app.use(cookieParser())
 
 
-app.get("/" , (req , res) =>{
-    return res.send("Hello")
-})
+
 
 app.use("/api/user" , userRoutes)
 app.use("/api/auth" , authRoutes)
@@ -39,7 +37,7 @@ app.use(express.static(path.join(__dirname, '/client/dist')));
 app.get('*', (req, res) => {
     res.sendFile(path.join(__dirname, 'client', 'dist', 'index.html'));
   });
-  
+
 app.use((err , req , res , next) =>{
 
     console.log("index.js -> app.use err fun executed");
