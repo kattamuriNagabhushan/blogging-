@@ -66,9 +66,7 @@ export default function SignUp() {
 
         </Link>
 
-        <p className='text-sm mt-5 '>
-          this is a demo project
-        </p>
+        
 
         </div>
 
