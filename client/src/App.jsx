@@ -34,6 +34,7 @@ export default function App() {
           <Route path="/dashboard" element = {<Dashboard/>} />
         </Route>
         <Route path="/sign-up" element = {<SignUp/>} />
+        
         <Route element = {<OnlyAdminPrivateRoute />}>
           <Route path="/create-post" element = {<CreatePost/>} />
           <Route path='/update-post/:postId' element={<UpdatePost />} />
