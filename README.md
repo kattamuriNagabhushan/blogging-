@@ -1,2 +1,3 @@
-#Website Link
-devblog-4nh1.onrender.com
+# Blogging Application
+
+[Visit my Website](devblog-4nh1.onrender.com)
